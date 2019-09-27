@@ -1,0 +1,10 @@
+version: '3'
+services:
+    ubuntu:
+        build: .docker/ubuntu
+        container_name: cgeindreau_ft_ls
+        ports:
+          - 80:80
+          - 443:443
+        volumes:
+          - ./src:/home/cgeindreau/ft_ls
