@@ -24,8 +24,11 @@ EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
 
 # VIM
-RUN apt-get install -y vim
-# CURL
-RUN apt-get install -y curl   
+RUN apt-get install -y vim 
+
+# GCC => COMPILATEUR C
+RUN apt-get install -y build-essential
+RUN apt-get install -y manpages-dev
+
 
 CMD tail -f /dev/null
